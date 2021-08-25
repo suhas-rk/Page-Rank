@@ -7,18 +7,26 @@ def main():
     current_key = None
     out_list = []
     f = open(sys.argv[1], "w")
+    
     for inp in sys.stdin:
         line = inp.strip()
         frm, to = line.split("\t")
+        
         if frm == current_key:
             if to == "-":
                 continue
             out_list.append(to)
+            
         else:
             if current_key != None:
                 if (len(out_list) > 0):
+                    # Print out the adjacency list
                     print(current_key, json.dumps(out_list), sep="\t")
+                    
+                # Print out the initial ranks into a file
                 f.write(current_key + ",1\n")
+            
+            #Take new node and initialize it's adjacency list
             current_key = frm
             out_list = [to] if to != "-" else []
 
