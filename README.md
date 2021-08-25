@@ -49,8 +49,8 @@ hdfs dfs -put web-Google.txt <path of directory>
 Step 3: Specify path to the following files in "iterate-hadoop.sh"  
         1) Input file  
         2) Output  
-        3) Mapper 1 and Reducer 1
-        4) Mapper 2 and Reducer 2  
+        3) Mapper 1 and Reducer 1  
+        4) Mapper 2 and Reducer 2    
         
 Step 4: Run "iterate-hadoop.sh"
 ```bash
