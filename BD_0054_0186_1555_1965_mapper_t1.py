@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 
-
+# Reads input from web-Google.txt, it is of format - from_node_id   to_node_id
 def main():
     for inp in sys.stdin:
         inp = inp.strip().split('\n')
